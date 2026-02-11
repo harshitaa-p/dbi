@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" fill="none">
+  <rect width="600" height="280" fill="#FEF3F2"/>
+
+  <!-- Calendar/Schedule visual -->
+  <g transform="translate(30, 30)">
+    <rect x="0" y="0" width="220" height="200" rx="12" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="36" rx="12" fill="#DD3023" opacity="0.08"/>
+    <text x="110" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#BA2419" font-weight="600">Maintenance Schedule</text>
+
+    <!-- Schedule items -->
+    <g transform="translate(14, 48)">
+      <!-- Item 1 - due -->
+      <rect x="0" y="0" width="192" height="35" rx="6" fill="#FEF3F2" stroke="#FFCDC9" stroke-width="1"/>
+      <circle cx="16" cy="17" r="7" fill="#F04D41" opacity="0.3"/>
+      <text x="16" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#DD3023" font-weight="700">!</text>
+      <text x="30" y="13" font-family="system-ui, sans-serif" font-size="8" fill="#9A2119" font-weight="500">Sprinkler Valve Check</text>
+      <text x="30" y="25" font-family="system-ui, sans-serif" font-size="7" fill="#F04D41">Due: Today — Zone B</text>
+    </g>
+
+    <g transform="translate(14, 90)">
+      <!-- Item 2 - upcoming -->
+      <rect x="0" y="0" width="192" height="35" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="16" cy="17" r="7" fill="#FBBF24" opacity="0.3"/>
+      <text x="16" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#D97706">⏱</text>
+      <text x="30" y="13" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500">Detector Battery Replace</text>
+      <text x="30" y="25" font-family="system-ui, sans-serif" font-size="7" fill="#6B7280">In 3 days — All zones</text>
+    </g>
+
+    <g transform="translate(14, 132)">
+      <!-- Item 3 - completed -->
+      <rect x="0" y="0" width="192" height="35" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="16" cy="17" r="7" fill="#22C55E" opacity="0.3"/>
+      <path d="M12 17 L15 20 L21 14" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <text x="30" y="13" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500" opacity="0.6">Extinguisher Inspection</text>
+      <text x="30" y="25" font-family="system-ui, sans-serif" font-size="7" fill="#22C55E">Completed — 2 days ago</text>
+    </g>
+  </g>
+
+  <!-- Data-driven prediction panel -->
+  <g transform="translate(290, 30)">
+    <rect x="0" y="0" width="270" height="200" rx="12" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <rect x="0" y="0" width="270" height="36" rx="12" fill="#DD3023" opacity="0.08"/>
+    <text x="135" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#BA2419" font-weight="600">Equipment Health Analytics</text>
+
+    <!-- Health meters -->
+    <g transform="translate(18, 48)">
+      <!-- Extinguisher health -->
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500">Fire Extinguishers</text>
+      <rect x="0" y="16" width="140" height="8" rx="4" fill="#FEE4E2"/>
+      <rect x="0" y="16" width="120" height="8" rx="4" fill="#22C55E" opacity="0.5"/>
+      <text x="150" y="24" font-family="system-ui, sans-serif" font-size="8" fill="#22C55E" font-weight="600">92%</text>
+
+      <!-- Sprinkler health -->
+      <text x="0" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500">Sprinkler Systems</text>
+      <rect x="0" y="52" width="140" height="8" rx="4" fill="#FEE4E2"/>
+      <rect x="0" y="52" width="105" height="8" rx="4" fill="#FBBF24" opacity="0.5"/>
+      <text x="150" y="60" font-family="system-ui, sans-serif" font-size="8" fill="#D97706" font-weight="600">78%</text>
+
+      <!-- Alarm health -->
+      <text x="0" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500">Alarm Systems</text>
+      <rect x="0" y="88" width="140" height="8" rx="4" fill="#FEE4E2"/>
+      <rect x="0" y="88" width="130" height="8" rx="4" fill="#22C55E" opacity="0.5"/>
+      <text x="150" y="96" font-family="system-ui, sans-serif" font-size="8" fill="#22C55E" font-weight="600">96%</text>
+
+      <!-- Hydrant health -->
+      <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#1F2937" font-weight="500">Hydrant Systems</text>
+      <rect x="0" y="124" width="140" height="8" rx="4" fill="#FEE4E2"/>
+      <rect x="0" y="124" width="95" height="8" rx="4" fill="#F04D41" opacity="0.4"/>
+      <text x="150" y="132" font-family="system-ui, sans-serif" font-size="8" fill="#F04D41" font-weight="600">68%</text>
+    </g>
+
+    <!-- Prediction badge -->
+    <g transform="translate(18, 156)">
+      <rect x="0" y="0" width="234" height="30" rx="6" fill="#FEF3F2" stroke="#FFCDC9" stroke-width="1"/>
+      <text x="12" y="12" font-family="system-ui, sans-serif" font-size="7" fill="#9A2119" font-weight="500">PREDICTION</text>
+      <text x="12" y="24" font-family="system-ui, sans-serif" font-size="8" fill="#BA2419">Hydrant valve replacement needed in ~12 days</text>
+    </g>
+  </g>
+
+  <!-- Bottom connection -->
+  <g transform="translate(155, 245)">
+    <rect x="0" y="0" width="290" height="28" rx="14" fill="#DD3023" opacity="0.1"/>
+    <text x="145" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#BA2419" font-weight="500">Data-Driven Predictive Maintenance</text>
+  </g>
+</svg>

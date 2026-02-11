@@ -1,0 +1,1 @@
+const fs=require("fs");const b=[];process.stdin.on("data",c=>b.push(c));process.stdin.on("end",()=>{fs.writeFileSync("C:/Users/harsh/Desktop/dbi/src/components/websites/FireSafety.jsx",Buffer.concat(b));console.log("Done")});

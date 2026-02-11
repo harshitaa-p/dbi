@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" fill="none">
+  <rect width="600" height="280" fill="#FEF3F2"/>
+
+  <!-- Ceiling mount -->
+  <rect x="250" y="0" width="100" height="8" rx="2" fill="#E5E7EB"/>
+
+  <!-- Smoke detector device -->
+  <g transform="translate(260, 12)">
+    <rect x="0" y="0" width="80" height="35" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cx="40" cy="17" r="10" fill="#FEE4E2" stroke="#DD3023" stroke-width="1"/>
+    <circle cx="40" cy="17" r="4" fill="#DD3023" opacity="0.6"/>
+    <!-- Blinking indicator -->
+    <circle cx="65" cy="12" r="3" fill="#22C55E" opacity="0.7"/>
+  </g>
+
+  <!-- WiFi waves from detector -->
+  <g transform="translate(300, 50)" opacity="0.3">
+    <path d="M-12 8 C-6 2 6 2 12 8" stroke="#DD3023" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M-20 14 C-10 4 10 4 20 14" stroke="#DD3023" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M-28 20 C-14 6 14 6 28 20" stroke="#DD3023" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Network of sensors -->
+  <!-- Sensor 1 - top left -->
+  <g transform="translate(80, 80)">
+    <circle cx="25" cy="25" r="22" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="12" fill="#FEE4E2"/>
+    <circle cx="25" cy="25" r="5" fill="#DD3023" opacity="0.5"/>
+    <text x="25" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#9A2119" opacity="0.7">Smoke</text>
+  </g>
+
+  <!-- Sensor 2 - top right -->
+  <g transform="translate(440, 80)">
+    <circle cx="25" cy="25" r="22" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="12" fill="#FEE4E2"/>
+    <!-- Thermometer icon -->
+    <rect x="22" y="16" width="6" height="16" rx="3" fill="#DD3023" opacity="0.5"/>
+    <circle cx="25" cy="32" r="4" fill="#DD3023" opacity="0.6"/>
+    <text x="25" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#9A2119" opacity="0.7">Heat</text>
+  </g>
+
+  <!-- Sensor 3 - bottom left -->
+  <g transform="translate(130, 180)">
+    <circle cx="25" cy="25" r="22" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="12" fill="#FEE4E2"/>
+    <text x="25" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#DD3023" opacity="0.6">CO</text>
+    <text x="25" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#9A2119" opacity="0.7">Gas</text>
+  </g>
+
+  <!-- Sensor 4 - bottom right -->
+  <g transform="translate(390, 180)">
+    <circle cx="25" cy="25" r="22" fill="#FFFFFF" stroke="#FFCDC9" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="12" fill="#FEE4E2"/>
+    <path d="M19 25 L25 19 L31 25 L25 31 Z" fill="#DD3023" opacity="0.5"/>
+    <text x="25" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#9A2119" opacity="0.7">Motion</text>
+  </g>
+
+  <!-- Connection lines between sensors -->
+  <line x1="130" y1="105" x2="260" y2="55" stroke="#DD3023" stroke-width="1" stroke-dasharray="4 3" opacity="0.2"/>
+  <line x1="465" y1="105" x2="340" y2="55" stroke="#DD3023" stroke-width="1" stroke-dasharray="4 3" opacity="0.2"/>
+  <line x1="180" y1="205" x2="260" y2="55" stroke="#DD3023" stroke-width="1" stroke-dasharray="4 3" opacity="0.2"/>
+  <line x1="415" y1="205" x2="340" y2="55" stroke="#DD3023" stroke-width="1" stroke-dasharray="4 3" opacity="0.2"/>
+
+  <!-- Central hub -->
+  <g transform="translate(260, 120)">
+    <rect x="0" y="0" width="80" height="50" rx="8" fill="#FFFFFF" stroke="#DD3023" stroke-width="1.5"/>
+    <text x="40" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#DD3023" font-weight="600">CENTRAL</text>
+    <text x="40" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#DD3023" font-weight="600">HUB</text>
+    <circle cx="12" cy="10" r="3" fill="#22C55E" opacity="0.7"/>
+  </g>
+
+  <!-- Real-time label -->
+  <g transform="translate(215, 240)">
+    <rect x="0" y="0" width="170" height="28" rx="14" fill="#DD3023" opacity="0.1"/>
+    <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#BA2419" font-weight="500">Real-time Networked Detection</text>
+  </g>
+</svg>
