@@ -7,11 +7,8 @@ export default function WebsiteSwitcher() {
 
   return (
     <div className="bg-gray-900 border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
-        <div className="hidden sm:flex items-center gap-2">
-          <img src="/logo/dbi-logo.png" alt="DBI" className="h-6 brightness-0 invert opacity-70" />
-        </div>
-        <div className="flex items-center gap-1 bg-gray-800 rounded-lg p-1 mx-auto sm:mx-0">
+      <div className="max-w-[1700px] mx-auto px-6 py-3 flex items-center justify-center">
+        <div className="flex gap-1.5 items-center p-1.5 mx-auto bg-gray-800 rounded-xl">
           {siteKeys.map((key) => {
             const site = websites[key]
             const isActive = activeWebsite === key
@@ -19,7 +16,7 @@ export default function WebsiteSwitcher() {
               <button
                 key={key}
                 onClick={() => switchWebsite(key)}
-                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200 whitespace-nowrap ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                   isActive
                     ? key === 'fire'
                       ? 'bg-fire-700 text-white shadow-sm'

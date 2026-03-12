@@ -19,10 +19,10 @@ const footerData = {
   },
   ai: {
     faq: [
-      { question: 'What kind of AI solutions does DBI develop?', answer: 'We develop applied AI systems including intelligent automation, predictive analytics, computer vision solutions, and NLP-based tools tailored for education, governance, industry, and MSMEs.' },
-      { question: 'Can DBI help integrate AI into our existing systems?', answer: 'Yes. Our consulting and deployment services are designed to integrate AI capabilities into your existing infrastructure with minimal disruption.' },
+      { question: 'What kind of AI solutions does DB infotech develop?', answer: 'We develop applied AI systems including intelligent automation, predictive analytics, computer vision solutions, and NLP-based tools tailored for education, governance, industry, and MSMEs.' },
+      { question: 'Can DB infotech help integrate AI into our existing systems?', answer: 'Yes. Our consulting and deployment services are designed to integrate AI capabilities into your existing infrastructure with minimal disruption.' },
       { question: 'Do you provide AI training for organizations?', answer: 'We offer customized AI training programs for teams and organizations, covering practical applications, tools, and implementation strategies.' },
-      { question: 'Is DBI aligned with government AI initiatives?', answer: 'Yes. Our work aligns with Viksit Bharat 2047 and the IndiaAI Mission, focusing on responsible, scalable AI solutions for national development.' },
+      { question: 'Is DB Infotech aligned with government AI initiatives?', answer: 'Yes. Our work aligns with Viksit Bharat 2047 and the IndiaAI Mission, focusing on responsible, scalable AI solutions for national development.' },
     ],
     links: [
       { label: 'Focus Areas', href: '#focus' },
@@ -55,9 +55,9 @@ export default function Footer() {
   return (
     <footer className={`${isFire ? 'bg-gray-950' : 'bg-gray-900'} text-white`}>
       {/* FAQ Section */}
-      <div className="section-padding border-b border-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-800/50 rounded-2xl p-6 md:p-8 text-white">
+      <div className="border-b border-gray-800 section-padding">
+        <div className="mx-auto max-w-4xl">
+          <div className="p-6 text-white rounded-2xl bg-gray-800/50 md:p-8">
             <FAQ
               items={data.faq}
               title="Frequently Asked Questions"
@@ -69,31 +69,31 @@ export default function Footer() {
 
       {/* Footer Content */}
       <div className="section-padding !py-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="max-w-[1700px] mx-auto">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
             {/* Brand */}
             <div>
               <div className="mb-5">
                 <img
                   src="/logo/dbi-logo.png"
                   alt="DBI Logo"
-                  className="h-12 w-auto brightness-0 invert opacity-90"
+                  className="w-auto h-12 opacity-90 brightness-0 invert"
                 />
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-2 font-medium">
+              <p className="mb-2 text-sm font-medium leading-relaxed text-gray-400">
                 {currentSite.brandName}
               </p>
-              <p className="text-gray-500 text-xs leading-relaxed mb-4">
+              <p className="mb-4 text-xs leading-relaxed text-gray-500">
                 {currentSite.fullName}
               </p>
-              <p className="text-gray-500 text-xs leading-relaxed">
+              <p className="text-xs leading-relaxed text-gray-500">
                 All partnerships, collaborations, and engagements are subject to mutual non-disclosure agreements to protect intellectual property and sensitive information.
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-300 mb-4">Quick Links</h4>
+              <h4 className="mb-4 text-sm font-semibold text-gray-300">Quick Links</h4>
               <ul className="space-y-2.5">
                 {data.links.map((link) => (
                   <li key={link.label}>
@@ -112,7 +112,7 @@ export default function Footer() {
 
             {/* Partners & Legal */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-300 mb-4">Associations</h4>
+              <h4 className="mb-4 text-sm font-semibold text-gray-300">Associations</h4>
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-3 py-1.5 bg-gray-800 rounded-md text-xs text-gray-400">
                   Govt. of India
@@ -129,18 +129,18 @@ export default function Footer() {
                   </span>
                 )}
               </div>
-              <div className="text-xs text-gray-500 space-y-1">
-                <a href="#" className="block hover:text-gray-400 transition-colors">Privacy Policy</a>
-                <a href="#" className="block hover:text-gray-400 transition-colors">Terms of Service</a>
-                <a href="#" className="block hover:text-gray-400 transition-colors">Disclaimer</a>
+              <div className="space-y-1 text-xs text-gray-500">
+                <a href="#" className="block transition-colors hover:text-gray-400">Privacy Policy</a>
+                <a href="#" className="block transition-colors hover:text-gray-400">Terms of Service</a>
+                <a href="#" className="block transition-colors hover:text-gray-400">Disclaimer</a>
               </div>
             </div>
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col gap-4 justify-between items-center pt-6 mt-10 border-t border-gray-800 sm:flex-row">
             <p className="text-xs text-gray-500">
-              &copy; {new Date().getFullYear()} Darade & Budhwant Infotech Pvt. Ltd. All rights reserved.
+              &copy; {new Date().getFullYear()} Darade Budhwant Infotech Pvt. Ltd. All rights reserved.
             </p>
             <p className="text-xs text-gray-600">
               Built with purpose.

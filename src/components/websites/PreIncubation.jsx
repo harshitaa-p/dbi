@@ -46,7 +46,7 @@ const events = [
 
 const stats = [
   { value: 500, suffix: '+', label: 'Students Mentored' },
-  { value: 50, suffix: '+', label: 'Projects Incubated' },
+  { value: 50, suffix: '+', label: 'Projects Pre-Incubated' },
   { value: 25, suffix: '+', label: 'Partner Institutions' },
   { value: 100, suffix: '+', label: 'Events Conducted' },
 ]
@@ -64,40 +64,40 @@ export default function PreIncubation() {
   return (
     <div className="animate-fade-in">
       {/* Hero */}
-      <section id="home" className="section-padding-lg bg-gradient-to-br from-primary-50 via-white to-blue-50 relative overflow-hidden" ref={parallaxRef}>
+      <section id="home" className="overflow-hidden relative bg-gradient-to-br via-white to-blue-50 section-padding-lg from-primary-50" ref={parallaxRef}>
         {/* Floating decoratives — respond to mouse */}
         <div
-          className="absolute top-20 left-10 w-72 h-72 bg-primary-200/20 rounded-full blur-3xl animate-float"
+          className="absolute left-10 top-20 w-72 h-72 rounded-full blur-3xl bg-primary-200/20 animate-float"
           style={{ transform: `translate(${offset.x * 0.5}px, ${offset.y * 0.5}px)` }}
         />
         <div
-          className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl animate-float-slow"
+          className="absolute right-10 bottom-10 w-96 h-96 rounded-full blur-3xl bg-indigo-200/20 animate-float-slow"
           style={{ transform: `translate(${offset.x * -0.3}px, ${offset.y * -0.3}px)` }}
         />
-        <div className="absolute top-1/2 left-1/3 w-4 h-4 bg-primary-400/30 rounded-full animate-pulse-soft" />
-        <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-indigo-400/30 rounded-full animate-float-delayed" />
+        <div className="absolute top-1/2 left-1/3 w-4 h-4 rounded-full bg-primary-400/30 animate-pulse-soft" />
+        <div className="absolute top-1/4 right-1/4 w-3 h-3 rounded-full bg-indigo-400/30 animate-float-delayed" />
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #01599f 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-        <div className="max-w-7xl mx-auto relative" ref={heroRef}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1700px] mx-auto relative" ref={heroRef}>
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
               <div className="reveal">
-                <p className="text-primary-700 text-sm font-medium tracking-wide mb-3 uppercase">
-                  Darade & Budhwant Infotech Pvt. Ltd.
+                <p className="mb-3 text-sm font-medium tracking-wide uppercase text-primary-700">
+                  Darade Budhwant Infotech Pvt. Ltd.
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 text-balance">
-                  Driven by vision. Built for{' '}
-                  <span className="gradient-text-primary">ideas that matter.</span>
+                <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl text-balance">
+                  Driven by vision.{' '}
+                  <span className="gradient-text-primary">Powered by innovation.</span>
                 </h1>
               </div>
-              <div className="reveal space-y-4 text-gray-600 leading-relaxed mb-8" style={{ transitionDelay: '0.15s' }}>
+              <div className="mb-8 space-y-4 leading-relaxed text-gray-600 reveal" style={{ transitionDelay: '0.15s' }}>
                 <p>
-                  Every meaningful innovation begins quietly — as an idea shaped by curiosity.
+                  Every meaningful innovation begins quietly as an idea shaped by curiosity.
                   Yet, many ideas never leave the classroom, not due to lack of potential, but because guidance, resources, and exposure are missing.
                 </p>
                 <p>
-                  The DBI Pre-Incubation Center exists to bridge this gap. We help students and institutions build structured environments where ideas can be explored, refined, and transformed into working prototypes.
+                  The DB Infotech Pre-Incubation Center exists to bridge this gap. We help students and institutions build structured environments where ideas can be explored, refined, and transformed into working prototypes.
                 </p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
@@ -111,13 +111,13 @@ export default function PreIncubation() {
             </div>
             <div className="hidden lg:block reveal-right">
               <TiltCard max={8} scale={1.03}>
-                <div className="rounded-2xl overflow-hidden shadow-xl glow-primary img-zoom relative">
+                <div className="overflow-hidden relative rounded-2xl shadow-xl glow-primary img-zoom">
                   <img
-                    src={px(4622108, 800)}
-                    alt="Indian students collaborating on campus"
+                    src="/images/student.jpeg"
+                    alt="Students collaborating on campus"
                     className="w-full h-[480px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t to-transparent from-primary-900/30" />
                 </div>
               </TiltCard>
             </div>
@@ -127,39 +127,39 @@ export default function PreIncubation() {
 
       {/* Stats */}
       <div className="section-padding !py-0 -mt-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1700px] mx-auto">
           <Stats items={stats} variant="primary" />
         </div>
       </div>
 
       {/* Marquee */}
-      <div className="bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto">
+      <div className="bg-white border-gray-100 border-y">
+        <div className="max-w-[1700px] mx-auto">
           <Marquee items={marqueeItems} variant="primary" speed={40} />
         </div>
       </div>
 
       {/* About */}
       <Section id="about" headline="Building ecosystems where early ideas find direction." bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <TiltCard max={6}>
-              <div className="rounded-xl overflow-hidden img-zoom glow-primary-hover transition-all duration-500">
+              <div className="overflow-hidden rounded-xl transition-all duration-500 img-zoom glow-primary-hover">
                 <img src={px(3184611, 600)} alt="Indian professionals in a team discussion" className="w-full h-full object-cover min-h-[240px]" />
               </div>
             </TiltCard>
           </div>
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 lg:col-span-2 sm:grid-cols-2">
             <GradientBorderCard variant="primary">
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Vision</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">To enable innovation by supporting startups, strengthening safety, and developing practical, AI-driven solutions that serve communities and industries across India.</p>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">Our Vision</h3>
+                <p className="text-sm leading-relaxed text-gray-600">To enable innovation by supporting startups, strengthening safety, and developing practical, AI-driven solutions that serve communities and industries across India.</p>
               </div>
             </GradientBorderCard>
             <GradientBorderCard variant="primary">
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Mission</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">To empower students and early-stage innovators through mentorship, technology, and real-world exposure — creating pathways from curiosity to capability.</p>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">Our Mission</h3>
+                <p className="text-sm leading-relaxed text-gray-600">To empower students and early-stage innovators through mentorship, technology, and real-world exposure — creating pathways from curiosity to capability.</p>
               </div>
             </GradientBorderCard>
           </div>
@@ -168,14 +168,14 @@ export default function PreIncubation() {
 
       {/* Learn */}
       <Section id="learn" headline="Learning beyond disciplines." subtitle="Students explore innovation across multiple domains through workshops, talks, and hands-on sessions designed to build both understanding and capability." bg="gray">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {learningDomains.map((domain) => (
             <TiltCard key={domain.title} max={5}>
-              <div className="bg-white rounded-xl border border-gray-100 hover:border-gray-200 card-hover img-zoom overflow-hidden h-full">
-                <img src={domain.image} alt={domain.title} className="w-full h-40 object-cover" />
+              <div className="overflow-hidden h-full bg-white rounded-xl border border-gray-100 hover:border-gray-200 card-hover img-zoom">
+                <img src={domain.image} alt={domain.title} className="object-cover w-full h-40" />
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{domain.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{domain.description}</p>
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">{domain.title}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{domain.description}</p>
                 </div>
               </div>
             </TiltCard>
@@ -185,13 +185,13 @@ export default function PreIncubation() {
 
       {/* Innovation Cell */}
       <Section id="innovation" headline="A space designed for exploration." subtitle="The Innovation Cell provides the infrastructure, guidance, and community that early innovators need to move from concept to creation." bg="white">
-        <ParallaxBanner image={px(12899155, 1200)} alt="Team collaborating in a modern workspace" overlay="bg-gradient-to-r from-primary-900/60 to-indigo-900/40">
-          <div className="text-center text-white px-6">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3">Where curiosity meets capability.</h3>
-            <p className="text-primary-200 max-w-2xl mx-auto">A structured space for experimentation, collaboration, and growth.</p>
+        <ParallaxBanner image="/images/lab.jpeg" alt="Innovation lab workspace" overlay="bg-gradient-to-r from-primary-900/60 to-indigo-900/40">
+          <div className="px-6 text-center text-white">
+            <h3 className="mb-3 text-2xl font-bold md:text-3xl">Where curiosity meets capability.</h3>
+            <p className="mx-auto max-w-2xl text-primary-200">A structured space for experimentation, collaboration, and growth.</p>
           </div>
         </ParallaxBanner>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
+        <div className="grid grid-cols-1 gap-6 mt-10 mb-10 sm:grid-cols-2 lg:grid-cols-3">
           {innovationFeatures.map((feature) => (
             <Card key={feature.title} variant="filled" {...feature} />
           ))}
@@ -208,23 +208,23 @@ export default function PreIncubation() {
 
       {/* Pre-Incubation Program */}
       <Section id="program" headline="From idea to intent." subtitle="Aligned with the Atmanirbhar Bharat vision, our pre-incubation program focuses on indigenous, scalable innovation — building capability from the ground up." bg="gray">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <TiltCard max={6}>
-              <div className="rounded-xl overflow-hidden img-zoom glow-primary-hover transition-all duration-500">
+              <div className="overflow-hidden rounded-xl transition-all duration-500 img-zoom glow-primary-hover">
                 <img src={px(5699475, 600)} alt="Mentoring session with Indian professionals" className="w-full h-full object-cover min-h-[300px]" />
               </div>
             </TiltCard>
           </div>
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 lg:col-span-3 sm:grid-cols-2">
             {programSections.map((section, i) => (
               <GradientBorderCard key={section.title} variant="primary">
                 <div className="p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex gap-4 items-start">
                     <span className="text-primary-700 font-bold text-lg mt-0.5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{section.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{section.description}</p>
+                      <h3 className="mb-2 font-semibold text-gray-900">{section.title}</h3>
+                      <p className="text-sm leading-relaxed text-gray-600">{section.description}</p>
                     </div>
                   </div>
                 </div>
@@ -236,14 +236,14 @@ export default function PreIncubation() {
 
       {/* Events */}
       <Section id="events" headline="Where ideas meet momentum." subtitle="Regular events that bring together students, mentors, and industry professionals in spaces designed for collaboration and growth." bg="white">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {events.map((event) => (
             <TiltCard key={event.title} max={4}>
-              <div className="group bg-primary-50 rounded-xl border border-primary-100 card-hover img-zoom overflow-hidden h-full">
-                <img src={event.image} alt={event.title} className="w-full h-48 object-cover" />
+              <div className="overflow-hidden h-full rounded-xl border group bg-primary-50 border-primary-100 card-hover img-zoom">
+                <img src={event.image} alt={event.title} className="object-cover w-full h-48" />
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-700 transition-colors">{event.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{event.description}</p>
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900 transition-colors group-hover:text-primary-700">{event.title}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{event.description}</p>
                 </div>
               </div>
             </TiltCard>
@@ -253,26 +253,26 @@ export default function PreIncubation() {
 
       {/* Contact */}
       <Section id="contact" headline="Let's start a conversation." subtitle="Whether you're a student with an idea, an institution looking to build innovation capacity, or a partner interested in collaboration — we'd like to hear from you." bg="gray">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           <TiltCard max={8}>
-            <a href="mailto:contact@dbi.co.in" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">Email</div>
-              <div className="text-xs text-gray-500 mt-1">contact@dbi.co.in</div>
+            <a href="mailto:contact@dbi.co.in" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Email</div>
+              <div className="mt-1 text-xs text-gray-500">contact@dbi.co.in</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="tel:+919999999999" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">Phone</div>
-              <div className="text-xs text-gray-500 mt-1">+91 99999 99999</div>
+            <a href="tel:+919999999999" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Phone</div>
+              <div className="mt-1 text-xs text-gray-500">+91 99999 99999</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">WhatsApp</div>
-              <div className="text-xs text-gray-500 mt-1">Chat with us</div>
+            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">WhatsApp</div>
+              <div className="mt-1 text-xs text-gray-500">Chat with us</div>
             </a>
           </TiltCard>
         </div>

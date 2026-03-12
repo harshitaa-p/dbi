@@ -18,12 +18,12 @@ export default function Section({ id, headline, subtitle, children, className = 
 
   return (
     <section id={id} className={`section-padding ${bgClasses[bg]} ${className}`} ref={ref}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1700px] mx-auto">
         {(headline || subtitle) && (
           <div className="mb-12 reveal">
             <div className={`h-1 w-12 ${accentLine[accentColor] || accentLine.primary} rounded-full mb-6`} />
             {headline && (
-              <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl text-balance">
                 {headline}
               </h2>
             )}

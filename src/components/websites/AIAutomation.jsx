@@ -48,24 +48,24 @@ export default function AIAutomation() {
   return (
     <div className="animate-fade-in">
       {/* Hero */}
-      <section id="home" className="section-padding-lg bg-gradient-to-br from-primary-50 via-white to-indigo-50 relative overflow-hidden" ref={parallaxRef}>
-        <div className="absolute top-10 right-20 w-80 h-80 bg-primary-200/20 rounded-full blur-3xl animate-float-slow" style={{ transform: `translate(${offset.x * 0.4}px, ${offset.y * 0.4}px)` }} />
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-indigo-300/15 rounded-full blur-3xl animate-float" style={{ transform: `translate(${offset.x * -0.3}px, ${offset.y * -0.3}px)` }} />
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary-400/40 rounded-full animate-pulse-soft" />
-        <div className="absolute bottom-1/4 left-1/4 w-5 h-5 bg-indigo-300/30 rounded-full animate-float-delayed" />
+      <section id="home" className="overflow-hidden relative bg-gradient-to-br via-white to-indigo-50 section-padding-lg from-primary-50" ref={parallaxRef}>
+        <div className="absolute top-10 right-20 w-80 h-80 rounded-full blur-3xl bg-primary-200/20 animate-float-slow" style={{ transform: `translate(${offset.x * 0.4}px, ${offset.y * 0.4}px)` }} />
+        <div className="absolute left-10 bottom-20 w-64 h-64 rounded-full blur-3xl bg-indigo-300/15 animate-float" style={{ transform: `translate(${offset.x * -0.3}px, ${offset.y * -0.3}px)` }} />
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-primary-400/40 animate-pulse-soft" />
+        <div className="absolute bottom-1/4 left-1/4 w-5 h-5 rounded-full bg-indigo-300/30 animate-float-delayed" />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #01599f 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-        <div className="max-w-7xl mx-auto relative" ref={heroRef}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1700px] mx-auto relative" ref={heroRef}>
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
               <div className="reveal">
-                <p className="text-primary-700 text-sm font-medium tracking-wide mb-3 uppercase">DBI AI & Automation</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 text-balance">
+                <p className="mb-3 text-sm font-medium tracking-wide uppercase text-primary-700">DB Infotech AI & Automation</p>
+                <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl text-balance">
                   Practical AI.{' '}<span className="gradient-text-primary">Real-world impact.</span>
                 </h1>
               </div>
-              <div className="reveal space-y-4 text-gray-600 leading-relaxed mb-8" style={{ transitionDelay: '0.15s' }}>
-                <p>Aligned with Viksit Bharat 2047 and the IndiaAI Mission, DBI's AI & Automation vertical focuses on building applied AI systems that improve efficiency, decision-making, and scalability across sectors.</p>
+              <div className="mb-8 space-y-4 leading-relaxed text-gray-600 reveal" style={{ transitionDelay: '0.15s' }}>
+                <p>Aligned with Viksit Bharat 2047 and the IndiaAI Mission, DB Infotech's AI & Automation vertical focuses on building applied AI systems that improve efficiency, decision-making, and scalability across sectors.</p>
                 <p>We believe AI should be accessible, purposeful, and grounded in real problems. Our work spans education, industry, governance, and safety — always starting with the problem, not the technology.</p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
@@ -74,9 +74,9 @@ export default function AIAutomation() {
             </div>
             <div className="hidden lg:block reveal-right">
               <TiltCard max={8} scale={1.03}>
-                <div className="rounded-2xl overflow-hidden shadow-xl glow-primary img-zoom relative">
+                <div className="overflow-hidden relative rounded-2xl shadow-xl glow-primary img-zoom">
                   <img src={px(5668838, 800)} alt="Indian tech professional working with AI systems" className="w-full h-[480px] object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t to-transparent from-primary-900/30" />
                 </div>
               </TiltCard>
             </div>
@@ -86,17 +86,17 @@ export default function AIAutomation() {
 
       {/* Stats */}
       <div className="section-padding !py-0 -mt-8 relative z-10">
-        <div className="max-w-7xl mx-auto"><Stats items={stats} variant="primary" /></div>
+        <div className="max-w-[1700px] mx-auto"><Stats items={stats} variant="primary" /></div>
       </div>
 
       {/* Marquee */}
-      <div className="bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto"><Marquee items={marqueeItems} variant="primary" speed={35} /></div>
+      <div className="bg-white border-gray-100 border-y">
+        <div className="max-w-[1700px] mx-auto"><Marquee items={marqueeItems} variant="primary" speed={35} /></div>
       </div>
 
       {/* Focus Areas */}
       <Section id="focus" headline="What we do." subtitle="Six focused verticals that cover the full lifecycle of AI adoption — from strategy and training to deployment and ongoing support." bg="white">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map((area) => (
             <TiltCard key={area.title} max={5}>
               <Card variant="filled" {...area} />
@@ -107,22 +107,22 @@ export default function AIAutomation() {
 
       {/* Visual break */}
       <ParallaxBanner image={px(6248956, 1400)} alt="Indian team collaborating on technology solutions" overlay="bg-gradient-to-r from-primary-900/80 via-primary-900/70 to-indigo-900/60">
-        <div className="text-center text-white px-6">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">AI that starts with the problem, not the technology.</h3>
-          <p className="text-primary-200 max-w-2xl mx-auto">We work across sectors to build systems that are purposeful, scalable, and aligned with India's development goals.</p>
+        <div className="px-6 text-center text-white">
+          <h3 className="mb-3 text-2xl font-bold md:text-3xl">AI that starts with the problem, not the technology.</h3>
+          <p className="mx-auto max-w-2xl text-primary-200">We work across sectors to build systems that are purposeful, scalable, and aligned with India's development goals.</p>
         </div>
       </ParallaxBanner>
 
       {/* Application Areas */}
       <Section id="applications" headline="Where we apply it." subtitle="AI solutions tailored for the sectors that matter most — from classrooms and small businesses to factories and government offices." bg="gray">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {applicationAreas.map((area) => (
             <TiltCard key={area.title} max={4}>
-              <div className="group bg-primary-50 rounded-xl border border-primary-100 card-hover img-zoom overflow-hidden h-full">
-                <img src={area.image} alt={area.title} className="w-full h-48 object-cover" />
+              <div className="overflow-hidden h-full rounded-xl border group bg-primary-50 border-primary-100 card-hover img-zoom">
+                <img src={area.image} alt={area.title} className="object-cover w-full h-48" />
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-700 transition-colors">{area.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{area.description}</p>
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900 transition-colors group-hover:text-primary-700">{area.title}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{area.description}</p>
                 </div>
               </div>
             </TiltCard>
@@ -132,30 +132,30 @@ export default function AIAutomation() {
 
       {/* Vision & Mission */}
       <Section id="vision" headline="Purpose-driven technology." bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 gap-8 mb-8 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <TiltCard max={6}>
-              <div className="rounded-xl overflow-hidden img-zoom glow-primary-hover transition-all duration-500">
+              <div className="overflow-hidden rounded-xl transition-all duration-500 img-zoom glow-primary-hover">
                 <img src={px(3760072, 600)} alt="Indian professional working on technology" className="w-full h-full object-cover min-h-[260px]" />
               </div>
             </TiltCard>
           </div>
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 lg:col-span-2 sm:grid-cols-2">
             <GradientBorderCard variant="primary">
               <div className="p-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Vision</h3>
-                <p className="text-gray-600 leading-relaxed">To be a trusted partner in India's AI journey — building practical, responsible, and scalable systems that improve how organizations work, learn, and serve.</p>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Vision</h3>
+                <p className="leading-relaxed text-gray-600">To be a trusted partner in India's AI journey — building practical, responsible, and scalable systems that improve how organizations work, learn, and serve.</p>
               </div>
             </GradientBorderCard>
             <GradientBorderCard variant="primary">
               <div className="p-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Mission</h3>
-                <p className="text-gray-600 leading-relaxed">To democratize AI by making it accessible, understandable, and useful for organizations across India — from small businesses to government institutions — through applied solutions, training, and sustained support.</p>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Mission</h3>
+                <p className="leading-relaxed text-gray-600">To democratize AI by making it accessible, understandable, and useful for organizations across India — from small businesses to government institutions — through applied solutions, training, and sustained support.</p>
               </div>
             </GradientBorderCard>
           </div>
         </div>
-        <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+        <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
           <div className="flex flex-wrap gap-3 items-center">
             <span className="text-sm font-medium text-gray-700">Aligned with:</span>
             <span className="px-4 py-1.5 bg-white rounded-full text-xs font-medium text-primary-700 border border-primary-100 transition-all hover:shadow-sm hover:border-primary-200 hover:scale-105">Viksit Bharat 2047</span>
@@ -168,26 +168,26 @@ export default function AIAutomation() {
 
       {/* Contact */}
       <Section id="contact" headline="Let's explore what's possible." subtitle="Have a use case in mind, or want to understand how AI can work for your organization? We'd be happy to discuss." bg="gray">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           <TiltCard max={8}>
-            <a href="mailto:ai@dbi.co.in" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">Email</div>
-              <div className="text-xs text-gray-500 mt-1">ai@dbi.co.in</div>
+            <a href="mailto:ai@dbi.co.in" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Email</div>
+              <div className="mt-1 text-xs text-gray-500">ai@dbi.co.in</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="tel:+919999999999" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">Phone</div>
-              <div className="text-xs text-gray-500 mt-1">+91 99999 99999</div>
+            <a href="tel:+919999999999" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Phone</div>
+              <div className="mt-1 text-xs text-gray-500">+91 99999 99999</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="#" className="block bg-white rounded-xl p-6 border border-gray-100 card-hover text-center group glow-primary-hover transition-all duration-500">
-              <div className="mb-3 flex justify-center"><svg className="w-6 h-6 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">Use Case Form</div>
-              <div className="text-xs text-gray-500 mt-1">Submit your requirements</div>
+            <a href="#" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg></div>
+              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Use Case Form</div>
+              <div className="mt-1 text-xs text-gray-500">Submit your requirements</div>
             </a>
           </TiltCard>
         </div>

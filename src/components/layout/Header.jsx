@@ -45,18 +45,18 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-40 transition-all duration-300 ${
       scrolled
-        ? 'glass shadow-sm border-b border-gray-200/50'
+        ? 'border-b shadow-sm glass border-gray-200/50'
         : 'bg-white border-b border-gray-100'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#home" className="flex items-center gap-3 shrink-0">
+      <div className="max-w-[1700px] mx-auto px-6 flex items-center justify-between h-16">
+        <a href="#home" className="flex gap-3 items-center shrink-0">
           <img
             src="/logo/dbi-logo.png"
-            alt="DBI — Driven by Vision, Powered by Innovation"
-            className="h-10 sm:h-11 w-auto"
+            alt="DB Infotech — Driven by Vision, Powered by Innovation"
+            className="w-auto h-10 sm:h-11"
           />
-          <div className="hidden md:block border-l border-gray-200 pl-3">
-            <div className="text-sm font-semibold text-gray-900 leading-tight">
+          <div className="hidden pl-3 border-l border-gray-200 md:block">
+            <div className="text-sm font-semibold leading-tight text-gray-900">
               {currentSite.brandName}
             </div>
             <div className="text-[10px] text-gray-400 leading-tight">
@@ -65,7 +65,7 @@ export default function Header() {
           </div>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden gap-1 items-center lg:flex">
           {items.map((item) => (
             <a
               key={item.label}
@@ -81,7 +81,7 @@ export default function Header() {
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-gray-600 hover:text-gray-900"
+          className="p-2 text-gray-600 lg:hidden hover:text-gray-900"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
@@ -97,8 +97,8 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-100 glass animate-fade-in">
-          <nav className="px-6 py-4 flex flex-col gap-1">
+        <div className="border-t border-gray-100 lg:hidden glass animate-fade-in">
+          <nav className="flex flex-col gap-1 px-6 py-4">
             {items.map((item) => (
               <a
                 key={item.label}
