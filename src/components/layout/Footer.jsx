@@ -31,17 +31,20 @@ const footerData = {
       { label: 'Contact Us', href: '#contact' },
     ],
   },
-  fire: {
+  fireandsafety: {
     faq: [
-      { question: 'What industries do you serve?', answer: 'We serve manufacturing, warehousing, commercial real estate, educational institutions, healthcare facilities, government buildings, and industrial complexes.' },
-      { question: 'Do you provide safety audits?', answer: 'Yes. We conduct comprehensive fire safety audits, risk assessments, and compliance reviews aligned with national safety standards and regulations.' },
-      { question: 'Can you automate our existing safety systems?', answer: 'Absolutely. We specialize in retrofitting existing safety infrastructure with IoT sensors, automated alerts, and intelligent monitoring systems.' },
-      { question: 'What certifications do you hold?', answer: 'Our team holds certifications aligned with national fire safety standards. We work in association with government safety bodies and regulatory authorities.' },
+      { question: 'What services does S.B. Fire Safety provide?', answer: 'We provide complete fire safety solutions including fire hydrant systems, sprinkler systems, fire alarm systems, AMC for all firefighting equipment, and fire extinguisher supply & refilling.' },
+      { question: 'Is S.B. Fire Safety a government authorised company?', answer: 'Yes. We are licensed by the Directorate of Maharashtra Fire Service (License No: MFS / LA / RF-117 / RD-112) and are ISO 9001:2015 certified.' },
+      { question: 'What industries do you serve?', answer: 'We serve residential buildings, hospitals, schools, industrial plants, oil & gas companies, shopping malls, and more across India.' },
+      { question: 'Do you provide Annual Maintenance Contracts?', answer: 'Yes. We offer comprehensive AMC services with regular maintenance visits, quick response support, advanced equipment servicing, and 24/7 on-call service.' },
+      { question: 'How can I get a consultation?', answer: 'You can reach us via email, phone, or WhatsApp. Visit our contact section or reach out to our head office at Woodwala Corporation, Turbhe, Navi Mumbai.' },
     ],
     links: [
-      { label: 'Services', href: '#services' },
-      { label: 'Automation', href: '#automation' },
       { label: 'About Us', href: '#about' },
+      { label: 'Services', href: '#services' },
+      { label: 'Certifications', href: '#certifications' },
+      { label: 'Industries', href: '#industries' },
+      { label: 'Clients', href: '#clients' },
       { label: 'Contact Us', href: '#contact' },
     ],
   },
@@ -50,7 +53,7 @@ const footerData = {
 export default function Footer() {
   const { activeWebsite, currentSite } = useWebsite()
   const data = footerData[activeWebsite]
-  const isFire = activeWebsite === 'fire'
+  const isFire = activeWebsite === 'fireandsafety'
 
   return (
     <footer className={`${isFire ? 'bg-gray-950' : 'bg-gray-900'} text-white`}>

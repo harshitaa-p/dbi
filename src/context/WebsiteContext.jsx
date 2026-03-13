@@ -9,6 +9,14 @@ const WEBSITES = {
     brandName: 'DB Infotech Pvt. Ltd.',
     fullName: 'Driven by Vision, Powered by Innovation',
   },
+  fireandsafety: {
+    id: 'fireandsafety',
+    label: 'Fire Safety Services',
+    shortLabel: 'Fire',
+    color: 'fire',
+    brandName: 'Fire Safety Services',
+    fullName: 'Keeping Your Safe!',
+  },
   ai: {
     id: 'ai',
     label: 'AI & Automation',
@@ -17,14 +25,7 @@ const WEBSITES = {
     brandName: 'DB Infotech Pvt. Ltd.',
     fullName: 'Driven by Vision, Powered by Innovation',
   },
-  fire: {
-    id: 'fire',
-    label: 'Fire & Industrial Safety',
-    shortLabel: 'Fire Safety',
-    color: 'fire',
-    brandName: 'DB Infotech Pvt. Ltd.',
-    fullName: 'Driven by Vision, Powered by Innovation',
-  },
+  
 }
 
 const WebsiteContext = createContext(null)

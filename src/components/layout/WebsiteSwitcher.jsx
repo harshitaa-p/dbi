@@ -18,7 +18,7 @@ export default function WebsiteSwitcher() {
                 onClick={() => switchWebsite(key)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                   isActive
-                    ? key === 'fire'
+                    ? key === 'fireandsafety'
                       ? 'bg-fire-700 text-white shadow-sm'
                       : 'bg-primary-700 text-white shadow-sm'
                     : 'text-gray-400 hover:text-white hover:bg-gray-700'

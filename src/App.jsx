@@ -5,12 +5,12 @@ import Footer from './components/layout/Footer'
 import ScrollProgress from './components/common/ScrollProgress'
 import PreIncubation from './components/websites/PreIncubation'
 import AIAutomation from './components/websites/AIAutomation'
-import FireSafety from './components/websites/FireSafety'
+import FireAndSafety from './components/websites/FireAndSafety'
 
 const websiteComponents = {
   preincubation: PreIncubation,
   ai: AIAutomation,
-  fire: FireSafety,
+  fireandsafety: FireAndSafety,
 }
 
 export default function App() {

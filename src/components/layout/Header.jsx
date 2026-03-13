@@ -19,11 +19,14 @@ const navItems = {
     { label: 'FAQ', href: '#faq' },
     { label: 'Contact', href: '#contact' },
   ],
-  fire: [
+  fireandsafety: [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
+    { label: 'Strength', href: '#strength' },
     { label: 'Services', href: '#services' },
-    { label: 'Automation', href: '#automation' },
+    { label: 'Certifications', href: '#certifications' },
+    { label: 'Industries', href: '#industries' },
+    { label: 'Clients', href: '#clients' },
     { label: 'Contact', href: '#contact' },
   ],
 }
@@ -40,7 +43,7 @@ export default function Header() {
   }, [])
 
   const items = navItems[activeWebsite] || []
-  const isFire = activeWebsite === 'fire'
+  const isFire = activeWebsite === 'fireandsafety'
 
   return (
     <header className={`sticky top-0 z-40 transition-all duration-300 ${

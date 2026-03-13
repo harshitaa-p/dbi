@@ -101,7 +101,7 @@ export default function PreIncubation() {
                 </p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
-                <Button href="#">
+                <Button href="/files/program.pdf">
                   Explore the Program
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -277,6 +277,19 @@ export default function PreIncubation() {
           </TiltCard>
         </div>
       </Section>
+      {/* Explore the Program CTA */}
+      <div className="py-16 text-center bg-gradient-to-br from-primary-50 via-white to-blue-50">
+        <div className="max-w-[1700px] mx-auto px-6">
+          <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">Ready to begin your innovation journey?</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-gray-600">Download our program brochure to learn more about the pre-incubation process, eligibility, and how to get started.</p>
+          <Button href="/files/program.pdf">
+            Explore the Program
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }
