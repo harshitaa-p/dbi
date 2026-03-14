@@ -84,8 +84,8 @@ const extinguisherTypes = [
 ]
 
 const industries = [
-  { title: 'Residential Buildings', image: px(323780) },
-  { title: 'Hospitals', image: px(668300) },
+  { title: 'Residential Buildings', image: '/images/fire/residential.png' },
+  { title: 'Hospitals', image: '/images/fire/hospital.png' },
   { title: 'Schools', image: px(256395) },
   { title: 'Industrial Plants', image: px(3862632) },
   { title: 'Oil & Gas Companies', image: '/images/fire/oil-company.png' },
