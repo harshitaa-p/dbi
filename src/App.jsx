@@ -3,6 +3,7 @@ import WebsiteSwitcher from './components/layout/WebsiteSwitcher'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import ScrollProgress from './components/common/ScrollProgress'
+import Chatbot from './components/common/Chatbot'
 import PreIncubation from './components/websites/PreIncubation'
 import AIAutomation from './components/websites/AIAutomation'
 import FireAndSafety from './components/websites/FireAndSafety'
@@ -31,6 +32,7 @@ export default function App() {
         <ActiveSite />
       </main>
       <Footer />
+      <Chatbot site={activeWebsite} />
     </div>
   )
 }

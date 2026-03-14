@@ -33,8 +33,8 @@ const footerData = {
   },
   fireandsafety: {
     faq: [
-      { question: 'What services does S.B. Fire Safety provide?', answer: 'We provide complete fire safety solutions including fire hydrant systems, sprinkler systems, fire alarm systems, AMC for all firefighting equipment, and fire extinguisher supply & refilling.' },
-      { question: 'Is S.B. Fire Safety a government authorised company?', answer: 'Yes. We are licensed by the Directorate of Maharashtra Fire Service (License No: MFS / LA / RF-117 / RD-112) and are ISO 9001:2015 certified.' },
+      { question: 'What services does DB Fire Safety provide?', answer: 'We provide complete fire safety solutions including fire hydrant systems, sprinkler systems, fire alarm systems, AMC for all firefighting equipment, and fire extinguisher supply & refilling.' },
+      { question: 'Is Fire Safety a government authorised company?', answer: 'Yes. We are licensed by the Directorate of Maharashtra Fire Service (License No: MFS / LA / RF-117 / RD-112) and are ISO 9001:2015 certified.' },
       { question: 'What industries do you serve?', answer: 'We serve residential buildings, hospitals, schools, industrial plants, oil & gas companies, shopping malls, and more across India.' },
       { question: 'Do you provide Annual Maintenance Contracts?', answer: 'Yes. We offer comprehensive AMC services with regular maintenance visits, quick response support, advanced equipment servicing, and 24/7 on-call service.' },
       { question: 'How can I get a consultation?', answer: 'You can reach us via email, phone, or WhatsApp. Visit our contact section or reach out to our head office at Woodwala Corporation, Turbhe, Navi Mumbai.' },
