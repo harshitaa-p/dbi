@@ -88,8 +88,8 @@ const industries = [
   { title: 'Hospitals', image: px(668300) },
   { title: 'Schools', image: px(256395) },
   { title: 'Industrial Plants', image: px(3862632) },
-  { title: 'Oil & Gas Companies', image: px(247763) },
-  { title: 'Shopping Malls', image: px(1114690) },
+  { title: 'Oil & Gas Companies', image: '/images/fire/oil-company.png' },
+  { title: 'Shopping Malls', image: '/images/fire/shopping-mall.png' },
 ]
 
 const clients = [
