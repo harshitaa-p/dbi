@@ -224,7 +224,7 @@ export default function FireAndSafety() {
               </div>
               <div className="mb-8 space-y-4 leading-relaxed text-gray-600 reveal" style={{ transitionDelay: '0.15s' }}>
                 <p>
-                  Complete solutions for all fire and safety requirements. From fire hydrant systems to annual maintenance contracts — we protect what matters most.
+                  Complete solutions for all fire and safety requirements. From fire hydrant systems to annual maintenance contracts we protect what matters most.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
                   {serviceHighlights.map((s) => (
@@ -277,7 +277,7 @@ export default function FireAndSafety() {
       </div>
 
       {/* About Us */}
-      <Section id="about" headline="About DB Fire & Safety Services" subtitle="An ISO 9001 certified organization established in 2008 — a pioneer in the firefighting industry in India." bg="white" accentColor="fire">
+      <Section id="about" headline="About DB Fire & Safety Services" subtitle="An ISO 9001 certified organization established in 2008 a pioneer in the firefighting industry in India." bg="white" accentColor="fire">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <TiltCard max={6}>
@@ -550,7 +550,7 @@ export default function FireAndSafety() {
       </Section>
 
       {/* Industries We Serve */}
-      <Section id="industries" headline="Industries We Serve" subtitle="We provide fire safety solutions across diverse sectors — protecting people, property, and operations." bg="gray" accentColor="fire">
+      <Section id="industries" headline="Industries We Serve" subtitle="We provide fire safety solutions across diverse sectors protecting people, property, and operations." bg="gray" accentColor="fire">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((ind) => (
             <TiltCard key={ind.title} max={5}>
@@ -579,7 +579,7 @@ export default function FireAndSafety() {
       </Section>
 
       {/* Contact */}
-      <Section id="contact" headline="Contact Us" subtitle="Whether you need an audit, consultation, or complete fire safety system — reach out and we'll respond promptly." bg="gray" accentColor="fire">
+      <Section id="contact" headline="Contact Us" subtitle="Whether you need an audit, consultation, or complete fire safety system reach out and we'll respond promptly." bg="gray" accentColor="fire">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="p-6 h-full bg-gradient-to-br to-orange-50 rounded-xl border from-fire-50 border-fire-200">

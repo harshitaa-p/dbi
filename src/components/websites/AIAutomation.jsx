@@ -13,17 +13,17 @@ const px = (id, w = 600) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
 
 const focusAreas = [
-  { title: 'Solutions', description: 'Custom AI solutions designed for specific industry challenges — from predictive analytics to intelligent decision support systems.' },
+  { title: 'Solutions', description: 'Custom AI solutions designed for specific industry challenges from predictive analytics to intelligent decision support systems.' },
   { title: 'Automation', description: 'Process automation that reduces manual effort, minimizes errors, and improves operational throughput across workflows.' },
-  { title: 'Training', description: 'Practical AI training programs for teams and organizations — building internal capability for sustainable AI adoption.' },
+  { title: 'Training', description: 'Practical AI training programs for teams and organizations building internal capability for sustainable AI adoption.' },
   { title: 'Consulting', description: 'Strategic AI consulting to help organizations identify high-impact use cases and build realistic implementation roadmaps.' },
-  { title: 'Deployment', description: 'End-to-end deployment support — from proof of concept to production-ready AI systems integrated with existing infrastructure.' },
+  { title: 'Deployment', description: 'End-to-end deployment support from proof of concept to production-ready AI systems integrated with existing infrastructure.' },
   { title: 'Support', description: 'Ongoing monitoring, maintenance, and optimization of deployed AI systems to ensure sustained performance and reliability.' },
 ]
 
 const applicationAreas = [
   { title: 'Education', description: 'AI-powered learning platforms, student performance analytics, automated assessment systems, and intelligent tutoring solutions.', image: px(5212317) },
-  { title: 'Startups & MSMEs', description: 'Affordable AI tools for small businesses — inventory optimization, customer insights, and operational automation.', image: px(7550303) },
+  { title: 'Startups & MSMEs', description: 'Affordable AI tools for small businesses inventory optimization, customer insights, and operational automation.', image: px(7550303) },
   { title: 'Industry', description: 'Predictive maintenance, quality control automation, supply chain optimization, and intelligent manufacturing systems.', image: px(3862632) },
   { title: 'Governance & Safety', description: 'AI for public safety monitoring, resource allocation, citizen services automation, and data-driven policy support.', image: px(8867482) },
 ]
@@ -66,7 +66,7 @@ export default function AIAutomation() {
               </div>
               <div className="mb-8 space-y-4 leading-relaxed text-gray-600 reveal" style={{ transitionDelay: '0.15s' }}>
                 <p>Aligned with Viksit Bharat 2047 and the IndiaAI Mission, DB Infotech's AI & Automation vertical focuses on building applied AI systems that improve efficiency, decision-making, and scalability across sectors.</p>
-                <p>We believe AI should be accessible, purposeful, and grounded in real problems. Our work spans education, industry, governance, and safety — always starting with the problem, not the technology.</p>
+                <p>We believe AI should be accessible, purposeful, and grounded in real problems. Our work spans education, industry, governance, and safety always starting with the problem, not the technology.</p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
                 <Button href="#">Discuss a Use Case<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></Button>
@@ -95,7 +95,7 @@ export default function AIAutomation() {
       </div>
 
       {/* Focus Areas */}
-      <Section id="focus" headline="What we do." subtitle="Six focused verticals that cover the full lifecycle of AI adoption — from strategy and training to deployment and ongoing support." bg="white">
+      <Section id="focus" headline="What we do." subtitle="Six focused verticals that cover the full lifecycle of AI adoption from strategy and training to deployment and ongoing support." bg="white">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map((area) => (
             <TiltCard key={area.title} max={5}>
@@ -114,7 +114,7 @@ export default function AIAutomation() {
       </ParallaxBanner>
 
       {/* Application Areas */}
-      <Section id="applications" headline="Where we apply it." subtitle="AI solutions tailored for the sectors that matter most — from classrooms and small businesses to factories and government offices." bg="gray">
+      <Section id="applications" headline="Where we apply it." subtitle="AI solutions tailored for the sectors that matter most from classrooms and small businesses to factories and government offices." bg="gray">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {applicationAreas.map((area) => (
             <TiltCard key={area.title} max={4}>
@@ -144,13 +144,13 @@ export default function AIAutomation() {
             <GradientBorderCard variant="primary">
               <div className="p-8">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900">Vision</h3>
-                <p className="leading-relaxed text-gray-600">To be a trusted partner in India's AI journey — building practical, responsible, and scalable systems that improve how organizations work, learn, and serve.</p>
+                <p className="leading-relaxed text-gray-600">To be a trusted partner in India's AI journey building practical, responsible, and scalable systems that improve how organizations work, learn, and serve.</p>
               </div>
             </GradientBorderCard>
             <GradientBorderCard variant="primary">
               <div className="p-8">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900">Mission</h3>
-                <p className="leading-relaxed text-gray-600">To democratize AI by making it accessible, understandable, and useful for organizations across India — from small businesses to government institutions — through applied solutions, training, and sustained support.</p>
+                <p className="leading-relaxed text-gray-600">To democratize AI by making it accessible, understandable, and useful for organizations across India from small businesses to government institutions through applied solutions, training, and sustained support.</p>
               </div>
             </GradientBorderCard>
           </div>

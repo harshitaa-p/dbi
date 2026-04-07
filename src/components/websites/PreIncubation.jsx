@@ -159,7 +159,7 @@ export default function PreIncubation() {
             <GradientBorderCard variant="primary">
               <div className="p-6">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">Our Mission</h3>
-                <p className="text-sm leading-relaxed text-gray-600">To empower students and early-stage innovators through mentorship, technology, and real-world exposure — creating pathways from curiosity to capability.</p>
+                <p className="text-sm leading-relaxed text-gray-600">To empower students and early-stage innovators through mentorship, technology, and real-world exposure creating pathways from curiosity to capability.</p>
               </div>
             </GradientBorderCard>
           </div>
@@ -252,7 +252,7 @@ export default function PreIncubation() {
       </Section>
 
       {/* Contact */}
-      <Section id="contact" headline="Let's start a conversation." subtitle="Whether you're a student with an idea, an institution looking to build innovation capacity, or a partner interested in collaboration — we'd like to hear from you." bg="gray">
+      <Section id="contact" headline="Let's start a conversation." subtitle="Whether you're a student with an idea, an institution looking to build innovation capacity, or a partner interested in collaboration we'd like to hear from you." bg="gray">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           <TiltCard max={8}>
             <a href="mailto:infodbinfotech@gmail.com" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
