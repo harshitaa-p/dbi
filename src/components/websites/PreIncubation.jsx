@@ -32,7 +32,7 @@ const innovationFeatures = [
 
 const programSections = [
   { title: 'Pre-Incubation Center', description: 'A structured environment within institutions where students can explore, validate, and refine their ideas under guided mentorship before formal incubation.' },
-  { title: 'Digital Platforms', description: 'Online tools and collaboration spaces that extend learning beyond physical boundaries — enabling remote mentorship, progress tracking, and resource access.' },
+  { title: 'Digital Platforms', description: 'Online tools and collaboration spaces that extend learning beyond physical boundaries enabling remote mentorship, progress tracking, and resource access.' },
   { title: 'Field-level Engagement', description: 'Real-world exposure through industry visits, community engagement, and on-ground problem identification that grounds innovation in actual needs.' },
   { title: 'Continuous Mentorship', description: 'Ongoing support from idea stage through prototype development, ensuring no student innovator is left without direction at critical stages.' },
 ]
