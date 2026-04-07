@@ -207,7 +207,7 @@ export default function PreIncubation() {
       </Section>
 
       {/* Pre-Incubation Program */}
-      <Section id="program" headline="From idea to intent." subtitle="Aligned with the Atmanirbhar Bharat vision, our pre-incubation program focuses on indigenous, scalable innovation — building capability from the ground up." bg="gray">
+      <Section id="program" headline="From idea to intent." subtitle="Aligned with the Atmanirbhar Bharat vision, our pre-incubation program focuses on indigenous, scalable innovation building capability from the ground up." bg="gray">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <TiltCard max={6}>
