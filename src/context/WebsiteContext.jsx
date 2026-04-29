@@ -6,7 +6,7 @@ const WEBSITES = {
     label: 'Pre-Incubation',
     shortLabel: 'Pre-Incubation',
     color: 'primary',
-    brandName: 'DB Infotech Pvt. Ltd.',
+    brandName: 'D.B. Infotech Pvt. Ltd.',
     fullName: 'Driven by Vision, Powered by Innovation',
   },
   fireandsafety: {
@@ -22,7 +22,7 @@ const WEBSITES = {
     label: 'AI & Automation',
     shortLabel: 'AI & Auto',
     color: 'primary',
-    brandName: 'DB Infotech Pvt. Ltd.',
+    brandName: 'D.B. Infotech Pvt. Ltd.',
     fullName: 'Driven by Vision, Powered by Innovation',
   },
   

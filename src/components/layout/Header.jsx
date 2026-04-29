@@ -55,7 +55,7 @@ export default function Header() {
         <a href="#home" className="flex gap-3 items-center shrink-0">
           <img
             src="/logo/dbi-logo.png"
-            alt="DB Infotech — Driven by Vision, Powered by Innovation"
+            alt="D.B. Infotech — Driven by Vision, Powered by Innovation"
             className="w-auto h-10 sm:h-11"
           />
           <div className="hidden pl-3 border-l border-gray-200 md:block">

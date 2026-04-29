@@ -19,10 +19,10 @@ const footerData = {
   },
   ai: {
     faq: [
-      { question: 'What kind of AI solutions does DB infotech develop?', answer: 'We develop applied AI systems including intelligent automation, predictive analytics, computer vision solutions, and NLP-based tools tailored for education, governance, industry, and MSMEs.' },
-      { question: 'Can DB infotech help integrate AI into our existing systems?', answer: 'Yes. Our consulting and deployment services are designed to integrate AI capabilities into your existing infrastructure with minimal disruption.' },
+      { question: 'What kind of AI solutions does D.B. infotech develop?', answer: 'We develop applied AI systems including intelligent automation, predictive analytics, computer vision solutions, and NLP-based tools tailored for education, governance, industry, and MSMEs.' },
+      { question: 'Can D.B. infotech help integrate AI into our existing systems?', answer: 'Yes. Our consulting and deployment services are designed to integrate AI capabilities into your existing infrastructure with minimal disruption.' },
       { question: 'Do you provide AI training for organizations?', answer: 'We offer customized AI training programs for teams and organizations, covering practical applications, tools, and implementation strategies.' },
-      { question: 'Is DB Infotech aligned with government AI initiatives?', answer: 'Yes. Our work aligns with Viksit Bharat 2047 and the IndiaAI Mission, focusing on responsible, scalable AI solutions for national development.' },
+      { question: 'Is D.B. Infotech aligned with government AI initiatives?', answer: 'Yes. Our work aligns with Viksit Bharat 2047 and the IndiaAI Mission, focusing on responsible, scalable AI solutions for national development.' },
     ],
     links: [
       { label: 'Focus Areas', href: '#focus' },
@@ -33,7 +33,7 @@ const footerData = {
   },
   fireandsafety: {
     faq: [
-      { question: 'What services does DB Fire Safety provide?', answer: 'We provide complete fire safety solutions including fire hydrant systems, sprinkler systems, fire alarm systems, AMC for all firefighting equipment, and fire extinguisher supply & refilling.' },
+      { question: 'What services does D.B. Fire Safety provide?', answer: 'We provide complete fire safety solutions including fire hydrant systems, sprinkler systems, fire alarm systems, AMC for all firefighting equipment, and fire extinguisher supply & refilling.' },
       { question: 'Is Fire Safety a government authorised company?', answer: 'Yes. We are licensed by the Directorate of Maharashtra Fire Service (License No: MFS / LA / RF-117 / RD-112) and are ISO 9001:2015 certified.' },
       { question: 'What industries do you serve?', answer: 'We serve residential buildings, hospitals, schools, industrial plants, oil & gas companies, shopping malls, and more across India.' },
       { question: 'Do you provide Annual Maintenance Contracts?', answer: 'Yes. We offer comprehensive AMC services with regular maintenance visits, quick response support, advanced equipment servicing, and 24/7 on-call service.' },
