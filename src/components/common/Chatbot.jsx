@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
+import { siteContent } from '../../data/siteContent'
 
-const data = {
+const chatbotData = {
   preincubation: [
     { q: 'What is pre-incubation?', a: 'Pre-incubation supports early startup ideas.' },
     { q: 'Who can join?', a: 'Students, innovators and entrepreneurs.' },
@@ -84,6 +85,43 @@ const data = {
   ],
 }
 
+function getChatbotFaqs(site) {
+  const baseFaqs = chatbotData[site] || chatbotData.preincubation
+  const footerFaqs = (siteContent[site]?.faq || []).map((item) => ({
+    q: item.question,
+    a: item.answer,
+  }))
+  const seen = new Set()
+
+  return [...footerFaqs, ...baseFaqs].filter((item) => {
+    const key = item.q.toLowerCase().trim()
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
+function getSuggestedQuestionGroups(site) {
+  const baseFaqs = chatbotData[site] || chatbotData.preincubation
+  const footerFaqs = (siteContent[site]?.faq || []).map((item) => ({
+    q: item.question,
+    a: item.answer,
+  }))
+  const seen = new Set()
+
+  const dedupe = (items) => items.filter((item) => {
+    const key = item.q.toLowerCase().trim()
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+
+  return {
+    faq: dedupe(footerFaqs),
+    previous: dedupe(baseFaqs),
+  }
+}
+
 const siteLabels = {
   preincubation: 'Pre-Incubation',
   fireandsafety: 'Fire & Safety',
@@ -151,7 +189,8 @@ export default function Chatbot({ site = 'preincubation' }) {
   const [showQuestions, setShowQuestions] = useState(true)
   const messagesEndRef = useRef(null)
 
-  const faqs = data[site] || data.preincubation
+  const faqs = getChatbotFaqs(site)
+  const suggestedGroups = getSuggestedQuestionGroups(site)
   const colors = accentMap[site] || accentMap.preincubation
   const label = siteLabels[site] || 'Assistant'
 
@@ -182,7 +221,6 @@ export default function Chatbot({ site = 'preincubation' }) {
     <div className="fixed right-6 bottom-6 z-50">
       {isOpen && (
         <div className="flex overflow-hidden flex-col mb-4 w-80 bg-white rounded-2xl border border-gray-200 shadow-2xl sm:w-96" style={{ height: '500px' }}>
-          {/* Header */}
           <div className={`${colors.header} text-white px-5 py-4 flex items-center justify-between shrink-0`}>
             <div className="flex gap-3 items-center">
               <div className="flex justify-center items-center w-9 h-9 bg-white/20 rounded-full">
@@ -198,7 +236,6 @@ export default function Chatbot({ site = 'preincubation' }) {
             </button>
           </div>
 
-          {/* Messages */}
           <div className="overflow-y-auto flex-1 px-4 py-4 space-y-3">
             {messages.map((msg, i) => {
               if (msg.from === 'action' && msg.text === 'more') {
@@ -235,20 +272,39 @@ export default function Chatbot({ site = 'preincubation' }) {
             {showQuestions && (
               <div className="pt-2 space-y-2">
                 <p className="text-xs font-medium text-gray-400">Popular questions:</p>
-                {faqs.slice(0, 5).map((faq) => (
-                  <button
-                    key={faq.q}
-                    onClick={() => handleSend(faq.q)}
-                    className={`block w-full text-left px-3 py-2 text-xs rounded-xl border transition ${colors.quick}`}
-                  >
-                    {faq.q}
-                  </button>
-                ))}
+
+                {suggestedGroups.faq.length > 0 && (
+                  <div className="space-y-2">
+                    <p className="text-[11px] font-semibold tracking-wide uppercase text-gray-400">FAQ questions</p>
+                    {suggestedGroups.faq.map((faq) => (
+                      <button
+                        key={`faq-${faq.q}`}
+                        onClick={() => handleSend(faq.q)}
+                        className={`block w-full text-left px-3 py-2 text-xs rounded-xl border transition ${colors.quick}`}
+                      >
+                        {faq.q}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {suggestedGroups.previous.length > 0 && (
+                  <div className="pt-2 space-y-2">
+                    {suggestedGroups.previous.slice(0, 5).map((faq) => (
+                      <button
+                        key={`previous-${faq.q}`}
+                        onClick={() => handleSend(faq.q)}
+                        className={`block w-full text-left px-3 py-2 text-xs rounded-xl border transition ${colors.quick}`}
+                      >
+                        {faq.q}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
 
-          {/* Input */}
           <div className="flex gap-2 items-center px-4 py-3 border-t border-gray-100 shrink-0">
             <input
               type="text"
@@ -265,7 +321,6 @@ export default function Chatbot({ site = 'preincubation' }) {
         </div>
       )}
 
-      {/* Toggle Button */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}

@@ -101,7 +101,7 @@ export default function PreIncubation() {
                 </p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
-                <Button href="/files/program.pdf">
+              <Button href="/files/Company profile DBI.pdf">
                   Explore the Program
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -262,10 +262,10 @@ export default function PreIncubation() {
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="tel:+917021970004" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
+            <a href="tel:+918691082285" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
               <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
               <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Phone</div>
-              <div className="mt-1 text-sm text-gray-700">+917021970004</div>
+              <div className="mt-1 text-sm text-gray-700">+918691082285</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
@@ -282,7 +282,7 @@ export default function PreIncubation() {
         <div className="max-w-[1700px] mx-auto px-6">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">Ready to begin your innovation journey?</h2>
           <p className="mx-auto mb-8 max-w-2xl text-gray-600">Download our program brochure to learn more about the pre-incubation process, eligibility, and how to get started.</p>
-          <Button href="/files/program.pdf">
+              <Button href="/files/Company profile DBI.pdf">
             Explore the Program
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

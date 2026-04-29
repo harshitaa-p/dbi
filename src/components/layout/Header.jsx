@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useWebsite } from '../../context/WebsiteContext'
+import TransparentLogo from '../common/TransparentLogo'
 
 const navItems = {
   preincubation: [
@@ -53,10 +54,9 @@ export default function Header() {
     }`}>
       <div className="max-w-[1700px] mx-auto px-6 flex items-center justify-between h-16">
         <a href="#home" className="flex gap-3 items-center shrink-0">
-          <img
-            src="/logo/dbi-logo.png"
+          <TransparentLogo
             alt="D.B. Infotech — Driven by Vision, Powered by Innovation"
-            className="w-auto h-10 sm:h-11"
+            className="object-contain w-auto h-10 sm:h-11"
           />
           <div className="hidden pl-3 border-l border-gray-200 md:block">
             <div className="text-sm font-semibold leading-tight text-gray-900">
