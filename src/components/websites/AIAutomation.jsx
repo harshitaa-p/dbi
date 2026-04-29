@@ -9,8 +9,14 @@ import Marquee from '../common/Marquee'
 import useScrollReveal from '../../hooks/useScrollReveal'
 import useMouseParallax from '../../hooks/useMouseParallax'
 
-const px = (id, w = 600) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
+const aiImages = {
+  hero: '/images/ai/hero.png',
+  banner: '/images/ai/banner.png',
+  vision: '/images/ai/vision.png',
+  education: '/images/ai/education.png',
+  msme: '/images/ai/msme.png',
+  governance: '/images/ai/governance.png',
+}
 
 const focusAreas = [
   { title: 'Solutions', description: 'Custom AI solutions designed for specific industry challenges from predictive analytics to intelligent decision support systems.' },
@@ -22,10 +28,10 @@ const focusAreas = [
 ]
 
 const applicationAreas = [
-  { title: 'Education', description: 'AI-powered learning platforms, student performance analytics, automated assessment systems, and intelligent tutoring solutions.', image: px(5212317) },
-  { title: 'Startups & MSMEs', description: 'Affordable AI tools for small businesses inventory optimization, customer insights, and operational automation.', image: px(7550303) },
-  { title: 'Industry', description: 'Predictive maintenance, quality control automation, supply chain optimization, and intelligent manufacturing systems.', image: px(3862632) },
-  { title: 'Governance & Safety', description: 'AI for public safety monitoring, resource allocation, citizen services automation, and data-driven policy support.', image: px(8867482) },
+  { title: 'Education', description: 'AI-powered learning platforms, student performance analytics, automated assessment systems, and intelligent tutoring solutions.', image: aiImages.education },
+  { title: 'Startups & MSMEs', description: 'Affordable AI tools for small businesses inventory optimization, customer insights, and operational automation.', image: aiImages.msme },
+  { title: 'Industry', description: 'Predictive maintenance, quality control automation, supply chain optimization, and intelligent manufacturing systems.', image: aiImages.banner },
+  { title: 'Governance & Safety', description: 'AI for public safety monitoring, resource allocation, citizen services automation, and data-driven policy support.', image: aiImages.governance },
 ]
 
 const stats = [
@@ -75,7 +81,7 @@ export default function AIAutomation() {
             <div className="hidden lg:block reveal-right">
               <TiltCard max={8} scale={1.03}>
                 <div className="overflow-hidden relative rounded-2xl shadow-xl glow-primary img-zoom">
-                  <img src={px(5668838, 800)} alt="Indian tech professional working with AI systems" className="w-full h-[480px] object-cover" />
+                  <img src={aiImages.hero} alt="Indian professionals collaborating around AI dashboards" className="w-full h-[480px] object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t to-transparent from-primary-900/30" />
                 </div>
               </TiltCard>
@@ -106,7 +112,7 @@ export default function AIAutomation() {
       </Section>
 
       {/* Visual break */}
-      <ParallaxBanner image={px(6248956, 1400)} alt="Indian team collaborating on technology solutions" overlay="bg-gradient-to-r from-primary-900/80 via-primary-900/70 to-indigo-900/60">
+      <ParallaxBanner image={aiImages.banner} alt="Indian innovation lab team reviewing AI systems" overlay="bg-gradient-to-r from-primary-900/80 via-primary-900/70 to-indigo-900/60">
         <div className="px-6 text-center text-white">
           <h3 className="mb-3 text-2xl font-bold md:text-3xl">AI that starts with the problem, not the technology.</h3>
           <p className="mx-auto max-w-2xl text-primary-200">We work across sectors to build systems that are purposeful, scalable, and aligned with India's development goals.</p>
@@ -135,8 +141,8 @@ export default function AIAutomation() {
         <div className="grid grid-cols-1 gap-8 mb-8 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <TiltCard max={6}>
-              <div className="overflow-hidden rounded-xl transition-all duration-500 img-zoom glow-primary-hover">
-                <img src={px(3760072, 600)} alt="Indian professional working on technology" className="w-full h-full object-cover min-h-[260px]" />
+              <div className="max-w-sm mx-auto p-4 rounded-xl border border-primary-100 shadow-sm transition-all duration-500 bg-gradient-to-b from-primary-50 to-white glow-primary-hover">
+                <img src={aiImages.vision} alt="Indian technology leader reviewing AI insights" className="w-full h-[440px] rounded-lg object-contain object-center bg-white" />
               </div>
             </TiltCard>
           </div>

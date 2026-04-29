@@ -22,9 +22,9 @@ const serviceHighlights = [
 ]
 
 const stats = [
-  { value: 15, suffix: '+', label: 'Years of Experience' },
+  { value: 18, suffix: '+', label: 'Years of Experience' },
   { value: 500, suffix: '+', label: 'Projects Completed' },
-  { value: 100, suffix: '+', label: 'Happy Clients' },
+  { value: 1000, suffix: '+', label: 'Happy Clients' },
   { value: 24, suffix: '/7', label: 'Support Available' },
 ]
 
