@@ -38,10 +38,10 @@ const programSections = [
 ]
 
 const events = [
-  { title: 'Hackathons', description: 'Intensive innovation sprints where teams build solutions to real challenges within defined timeframes.', image: px(7414283) },
-  { title: 'Kumbhathon', description: 'A unique innovation event focused on solving challenges related to large-scale gatherings and public management.', image: px(8278898) },
-  { title: 'Workshops', description: 'Hands-on sessions covering design thinking, prototyping, business planning, and technical skill development.', image: px(3153199) },
-  { title: 'Demo Days', description: 'Showcase events where student teams present their projects to mentors, investors, and industry professionals.', image: px(7793645) },
+  { title: 'Hackathons', description: 'Intensive innovation sprints where teams build solutions to real challenges within defined timeframes.', image: '/images/hackathon.png' },
+  { title: 'Kumbhathon', description: 'A unique innovation event focused on solving challenges related to large-scale gatherings and public management.', image: '/images/kumbhathon.png' },
+  { title: 'Workshops', description: 'Hands-on sessions covering design thinking, prototyping, business planning, and technical skill development.', image: '/images/workshops.png' },
+  { title: 'Demo Days', description: 'Showcase events where student teams present their projects to mentors, investors, and industry professionals.', image: '/images/demo.png' },
 ]
 
 const stats = [
@@ -145,23 +145,27 @@ export default function PreIncubation() {
           <div className="lg:col-span-1">
             <TiltCard max={6}>
               <div className="overflow-hidden rounded-xl transition-all duration-500 img-zoom glow-primary-hover">
-                <img src={px(3184611, 600)} alt="Indian professionals in a team discussion" className="w-full h-full object-cover min-h-[240px]" />
+                <img src="/images/student1.png" alt="Indian student innovator" className="w-full h-full object-cover min-h-[240px]" />
               </div>
             </TiltCard>
           </div>
-          <div className="grid grid-cols-1 gap-6 lg:col-span-2 sm:grid-cols-2">
-            <GradientBorderCard variant="primary">
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">Our Vision</h3>
-                <p className="text-lg leading-relaxed text-gray-600">To enable innovation by supporting startups, strengthening safety, and developing practical, AI-driven solutions that serve communities and industries across India.</p>
+          <div className="flex items-center lg:col-span-2">
+            <div className="p-4 w-full rounded-2xl border border-primary-100 bg-primary-50/60 sm:p-5">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <GradientBorderCard variant="primary">
+                  <div className="p-6">
+                    <h3 className="mb-2 text-xl font-semibold text-gray-900">Our Vision</h3>
+                    <p className="text-lg leading-relaxed text-gray-600">To enable innovation by supporting startups, strengthening safety, and developing practical, AI-driven solutions that serve communities and industries across India.</p>
+                  </div>
+                </GradientBorderCard>
+                <GradientBorderCard variant="primary">
+                  <div className="p-6">
+                    <h3 className="mb-2 text-xl font-semibold text-gray-900">Our Mission</h3>
+                    <p className="text-lg leading-relaxed text-gray-600">To empower students and early-stage innovators through mentorship, technology, and real-world exposure creating pathways from curiosity to capability.</p>
+                  </div>
+                </GradientBorderCard>
               </div>
-            </GradientBorderCard>
-            <GradientBorderCard variant="primary">
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">Our Mission</h3>
-                <p className="text-lg leading-relaxed text-gray-600">To empower students and early-stage innovators through mentorship, technology, and real-world exposure creating pathways from curiosity to capability.</p>
-              </div>
-            </GradientBorderCard>
+            </div>
           </div>
         </div>
       </Section>
@@ -197,7 +201,7 @@ export default function PreIncubation() {
           ))}
         </div>
         <div className="text-center">
-          <Button variant="secondary" href="https://forms.gle/WcVCCB54wF7odT1u7" target="_blank" rel="noopener noreferrer">
+          <Button href="https://forms.gle/WcVCCB54wF7odT1u7">
             Join an Innovation Activity
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -240,7 +244,9 @@ export default function PreIncubation() {
           {events.map((event) => (
             <TiltCard key={event.title} max={4}>
               <div className="overflow-hidden h-full rounded-xl border group bg-primary-50 border-primary-100 card-hover img-zoom">
-                <img src={event.image} alt={event.title} className="object-cover w-full h-48" />
+                <div className="overflow-hidden relative w-full h-48 sm:h-52 bg-primary-100/40">
+                  <img src={event.image} alt={event.title} className="object-cover absolute inset-0 w-full h-full" />
+                </div>
                 <div className="p-6">
                   <h3 className="mb-2 text-lg font-semibold text-gray-900 transition-colors group-hover:text-primary-700">{event.title}</h3>
                   <p className="text-sm leading-relaxed text-gray-600">{event.description}</p>
@@ -255,24 +261,24 @@ export default function PreIncubation() {
       <Section id="contact" headline="Let's start a conversation." subtitle="Whether you're a student with an idea, an institution looking to build innovation capacity, or a partner interested in collaboration we'd like to hear from you." bg="gray">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           <TiltCard max={8}>
-            <a href="mailto:infodbinfotech@gmail.com" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Email</div>
-              <div className="mt-1 text-sm text-gray-700">infodbinfotech@gmail.com</div>
+            <a href="mailto:infodbinfotech@gmail.com" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+              <div className="text-sm font-medium text-white">Email</div>
+              <div className="mt-1 text-sm text-primary-100">infodbinfotech@gmail.com</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="tel:+918691082285" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Phone</div>
-              <div className="mt-1 text-sm text-gray-700">+918691082285</div>
+            <a href="tel:+918691082285" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
+              <div className="text-sm font-medium text-white">Phone</div>
+              <div className="mt-1 text-sm text-primary-100">+918691082285</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="https://wa.me/917021970004" target="_blank" rel="noopener noreferrer" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">WhatsApp</div>
-              <div className="mt-1 text-sm text-gray-700">Chat with us</div>
+            <a href="https://wa.me/917021970004" target="_blank" rel="noopener noreferrer" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
+              <div className="text-sm font-medium text-white">WhatsApp</div>
+              <div className="mt-1 text-sm text-primary-100">Chat with us</div>
             </a>
           </TiltCard>
         </div>
@@ -283,7 +289,7 @@ export default function PreIncubation() {
           <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">Ready to begin your innovation journey?</h2>
           <p className="mx-auto mb-8 max-w-2xl text-gray-600">Download our program brochure to learn more about the pre-incubation process, eligibility, and how to get started.</p>
               <Button href="/files/Company profile DBI.pdf">
-            Explore the Program
+            Explore the Services
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>

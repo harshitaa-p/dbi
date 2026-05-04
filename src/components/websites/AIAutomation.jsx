@@ -75,7 +75,7 @@ export default function AIAutomation() {
                 <p>We believe AI should be accessible, purposeful, and grounded in real problems. Our work spans education, industry, governance, and safety always starting with the problem, not the technology.</p>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.3s' }}>
-                <Button href="#">Discuss a Use Case<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></Button>
+                <Button href="https://forms.gle/ha5xH7yz9t4YsazQ7">Discuss a Use Case<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></Button>
               </div>
             </div>
             <div className="hidden lg:block reveal-right">
@@ -176,24 +176,24 @@ export default function AIAutomation() {
       <Section id="contact" headline="Let's explore what's possible." subtitle="Have a use case in mind, or want to understand how AI can work for your organization? We'd be happy to discuss." bg="gray">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           <TiltCard max={8}>
-            <a href="mailto:infodbinfotech@gmail.com" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Email</div>
-              <div className="mt-1 text-sm text-gray-700">infodbinfotech@gmail.com</div>
+            <a href="mailto:infodbinfotech@gmail.com" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800 shadow-lg shadow-primary-900/20">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+              <div className="text-sm font-medium text-white">Email</div>
+              <div className="mt-1 text-sm text-primary-100">infodbinfotech@gmail.com</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="tel:+918691082285" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Phone</div>
-              <div className="mt-1 text-sm text-gray-700">+918691082285</div>
+            <a href="tel:+918691082285" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800 shadow-lg shadow-primary-900/20">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
+              <div className="text-sm font-medium text-white">Phone</div>
+              <div className="mt-1 text-sm text-primary-100">+918691082285</div>
             </a>
           </TiltCard>
           <TiltCard max={8}>
-            <a href="#" className="block p-6 text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-primary-hover">
-              <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-primary-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg></div>
-              <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-primary-700">Use Case Form</div>
-              <div className="mt-1 text-sm text-gray-700">Submit your requirements</div>
+            <a href="https://forms.gle/ha5xH7yz9t4YsazQ7" target="_blank" rel="noopener noreferrer" className="block p-6 text-center rounded-xl border transition-all duration-500 card-hover group glow-primary-hover bg-primary-700 border-primary-600 hover:bg-primary-800 shadow-lg shadow-primary-900/20">
+              <div className="flex justify-center mb-3"><svg className="w-6 h-6 transition-colors text-primary-100 group-hover:text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg></div>
+              <div className="text-sm font-medium text-white">Use Case Form</div>
+              <div className="mt-1 text-sm text-primary-100">Submit your requirements</div>
             </a>
           </TiltCard>
         </div>

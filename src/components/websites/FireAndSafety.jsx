@@ -13,6 +13,8 @@ import useMouseParallax from '../../hooks/useMouseParallax'
 const px = (id, w = 600) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
 
+const consultationFormUrl = 'https://forms.gle/ha5xH7yz9t4YsazQ7'
+
 const serviceHighlights = [
   { icon: '🔥', title: 'Fire Hydrant System', desc: 'Supply & Installation' },
   { icon: '💧', title: 'Sprinkler System', desc: 'Design & Installation' },
@@ -235,11 +237,11 @@ export default function FireAndSafety() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4 reveal" style={{ transitionDelay: '0.3s' }}>
-                <Button variant="fire" href="#contact">
+                <Button variant="fire" href={consultationFormUrl}>
                   Get a Free Consultation
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
                 </Button>
-                <Button variant="fireSecondary" href="#services">
+                <Button variant="fireSecondary" href="/files/Company%20profile%20DBI.pdf">
                   Our Services
                 </Button>
               </div>
@@ -280,11 +282,15 @@ export default function FireAndSafety() {
       <Section id="about" headline="About D.B. Fire & Safety Services" subtitle="An ISO 9001 certified organization established in 2008 a pioneer in the firefighting industry in India." bg="white" accentColor="fire">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <TiltCard max={6}>
-              <div className="overflow-hidden rounded-xl border transition-all duration-500 border-fire-100 img-zoom glow-fire-hover">
-                <img src={px(4805958, 600)} alt="Fire safety equipment showroom" className="w-full object-cover h-[300px]" />
+            <div className="overflow-hidden rounded-xl border transition-all duration-500 border-fire-100 glow-fire-hover bg-gradient-to-b from-fire-50 to-fire-100/40">
+              <div className="flex justify-center items-center p-4 sm:p-5">
+                <img
+                  src="/images/shop.png"
+                  alt="D.B. Fire & Safety showroom"
+                  className="mx-auto block h-auto w-full max-h-[min(85vh,640px)] object-contain origin-center rotate-[2deg] rounded-md shadow-sm ring-1 ring-fire-100/70"
+                />
               </div>
-            </TiltCard>
+            </div>
           </div>
           <div className="lg:col-span-3">
             <p className="mb-4 leading-relaxed text-gray-600">
@@ -295,15 +301,15 @@ export default function FireAndSafety() {
             </p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <GradientBorderCard variant="fire">
-                <div className="p-5">
-                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Our Mission</h4>
-                  <p className="text-sm text-gray-600">To spread awareness about fire safety, understand client requirements, and deliver effective, reliable solutions.</p>
+                <div className="h-full min-h-full rounded-xl border-l-[5px] border-fire-600 bg-gradient-to-br from-fire-50 via-white to-fire-50/50 p-5 sm:p-6 shadow-inner ring-1 ring-inset ring-fire-100/70">
+                  <h4 className="mb-2 text-base font-semibold sm:text-lg text-fire-900">Our Mission</h4>
+                  <p className="text-base leading-relaxed text-gray-700">To spread awareness about fire safety, understand client requirements, and deliver effective, reliable solutions.</p>
                 </div>
               </GradientBorderCard>
               <GradientBorderCard variant="fire">
-                <div className="p-5">
-                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Our Vision</h4>
-                  <p className="text-sm text-gray-600">To deliver maximum value by offering expertise, high quality products, professional services, and customer-friendly support.</p>
+                <div className="h-full min-h-full rounded-xl border-l-[5px] border-fire-600 bg-gradient-to-br from-fire-50 via-white to-fire-50/50 p-5 sm:p-6 shadow-inner ring-1 ring-inset ring-fire-100/70">
+                  <h4 className="mb-2 text-base font-semibold sm:text-lg text-fire-900">Our Vision</h4>
+                  <p className="text-base leading-relaxed text-gray-700">To deliver maximum value by offering expertise, high quality products, professional services, and customer-friendly support.</p>
                 </div>
               </GradientBorderCard>
             </div>
@@ -316,8 +322,8 @@ export default function FireAndSafety() {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {['High Quality Products', 'Professional Services', 'Timely Completion', 'Customer-friendly Support', 'Skilled Professionals'].map((item) => (
             <TiltCard key={item} max={6}>
-              <div className="flex justify-center items-center p-6 h-full text-center bg-white rounded-xl border border-gray-100 card-hover">
-                <p className="text-sm font-semibold text-gray-800">{item}</p>
+              <div className="flex justify-center items-center p-6 h-full text-center rounded-xl border bg-fire-700 border-fire-800 card-hover hover:bg-fire-800">
+                <p className="text-sm font-semibold text-white">{item}</p>
               </div>
             </TiltCard>
           ))}
@@ -594,30 +600,30 @@ export default function FireAndSafety() {
           </div>
           <div className="grid grid-cols-1 gap-4 lg:col-span-3 sm:grid-cols-3">
             <TiltCard max={8}>
-              <a href="mailto:infodbinfotech@gmail.com" className="block p-6 h-full text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-fire-hover">
-                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-fire-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
-                <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-fire-700">Email</div>
-                <div className="mt-1 text-sm text-gray-700">infodbinfotech@gmail.com</div>
+              <a href="mailto:infodbinfotech@gmail.com" className="block p-6 h-full text-center rounded-xl border-2 bg-gradient-to-br from-fire-50 via-white to-orange-50/50 border-fire-200 shadow-md shadow-fire-900/5 ring-1 ring-fire-100/80 transition-all duration-500 card-hover group glow-fire-hover hover:border-fire-400 hover:shadow-lg hover:shadow-fire-900/10">
+                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-fire-600 transition-colors group-hover:text-fire-700" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+                <div className="text-sm font-semibold text-fire-900 transition-colors group-hover:text-fire-800">Email</div>
+                <div className="mt-1 text-sm text-fire-800/90">infodbinfotech@gmail.com</div>
               </a>
             </TiltCard>
             <TiltCard max={8}>
-              <a href="tel:+918691082285" className="block p-6 h-full text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-fire-hover">
-                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-fire-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
-                <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-fire-700">Phone</div>
-                <div className="mt-1 text-sm text-gray-700">+918691082285</div>
+              <a href="tel:+918691082285" className="block p-6 h-full text-center rounded-xl border-2 bg-gradient-to-br from-fire-50 via-white to-orange-50/50 border-fire-200 shadow-md shadow-fire-900/5 ring-1 ring-fire-100/80 transition-all duration-500 card-hover group glow-fire-hover hover:border-fire-400 hover:shadow-lg hover:shadow-fire-900/10">
+                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-fire-600 transition-colors group-hover:text-fire-700" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
+                <div className="text-sm font-semibold text-fire-900 transition-colors group-hover:text-fire-800">Phone</div>
+                <div className="mt-1 text-sm text-fire-800/90">+918691082285</div>
               </a>
             </TiltCard>
             <TiltCard max={8}>
-              <a href="https://wa.me/917021970004" target="_blank" rel="noopener noreferrer" className="block p-6 h-full text-center bg-white rounded-xl border border-gray-100 transition-all duration-500 card-hover group glow-fire-hover">
-                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-gray-400 transition-colors group-hover:text-fire-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
-                <div className="text-sm font-medium text-gray-900 transition-colors group-hover:text-fire-700">WhatsApp</div>
-                <div className="mt-1 text-sm text-gray-700">Chat with us</div>
+              <a href="https://wa.me/917021970004" target="_blank" rel="noopener noreferrer" className="block p-6 h-full text-center rounded-xl border-2 bg-gradient-to-br from-fire-50 via-white to-orange-50/50 border-fire-200 shadow-md shadow-fire-900/5 ring-1 ring-fire-100/80 transition-all duration-500 card-hover group glow-fire-hover hover:border-fire-400 hover:shadow-lg hover:shadow-fire-900/10">
+                <div className="flex justify-center mb-3"><svg className="w-6 h-6 text-fire-600 transition-colors group-hover:text-fire-700" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg></div>
+                <div className="text-sm font-semibold text-fire-900 transition-colors group-hover:text-fire-800">WhatsApp</div>
+                <div className="mt-1 text-sm text-fire-800/90">Chat with us</div>
               </a>
             </TiltCard>
           </div>
         </div>
         <div className="mt-8 text-center">
-          <Button variant="fire" href="mailto:infodbinfotech@gmail.com">
+          <Button variant="fire" href={consultationFormUrl}>
             Get a Free Consultation
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
           </Button>
